@@ -1,0 +1,66 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	margin: 50px;
+}
+main{
+	widows: 100%;
+	height: auto;
+	padding: 20px;
+	margin: 50px auto;
+	background: whitesmoke;
+	border-radius: 25px;
+	font-family: system-ui;
+	color: #666;
+}
+.header{
+	width: 90%;
+	height: 100px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.gpavalue{
+	font-size: 25px;
+}
+
+.process {
+	width: 90%;
+	height: auto;
+	margin: auto;
+}
+
+.subject {
+	display: flex;
+}
+
+.subject table tr td {
+	padding-bottom: 45px;
+}
+
+/*.gpa {
+	padding-left: 10px;
+
+	margin-left: 25px;
+}
+*/
+.redio-btn {
+	/*display: none;*/
+}
+
+.label {
+	padding: 5px 10px;
+	background-color: #888;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+/*.lab-1 input[type="redio"]:checked ~ .lab-1 {
+	background-color: #2196F3;
+}
+*/

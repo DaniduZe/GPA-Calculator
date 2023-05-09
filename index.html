@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NIBM DSE / DCSD - GPA CALCULATOR</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<main>
+
+		<section class="header">
+			<div class="items-controller">
+				<h3>NIBM DSE / DCSD - GPA CALCULATOR</h3>
+			</div>
+			<div class="gpavalue" id="showgpa"> GPA : 0</div>
+		</section>
+
+		<section class="process">
+
+			<div class="subject">
+
+
+				<table>
+					<tr>
+						<td><h5>Introduction to computer science </h5></td>
+						<td>:
+
+							<label class="label lab-1" onclick="itcs()">A+
+								<input type="radio" class="redio-btn" name="itcs" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="itcs()">A
+								<input type="radio" class="redio-btn" name="itcs" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="itcs()">A-
+								<input type="radio" class="redio-btn" name="itcs" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="itcs()">B+
+								<input type="radio" class="redio-btn" name="itcs" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="itcs()">B
+								<input type="radio" class="redio-btn" name="itcs" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="itcs()">B-
+								<input type="radio" class="redio-btn" name="itcs" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="itcs()">C+
+								<input type="radio" class="redio-btn" name="itcs" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="itcs()">C
+								<input type="radio" class="redio-btn" name="itcs" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="itcs()">C-
+								<input type="radio" class="redio-btn" name="itcs" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="itcs()">D+
+								<input type="radio" class="redio-btn" name="itcs" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="itcs()">D
+								<input type="radio" class="redio-btn" name="itcs" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="itcs()">E
+								<input type="radio" class="redio-btn" name="itcs" value="0">
+							</label>
+
+						</td>
+					</tr>
+
+					<tr>
+						<td><h5>Programming Fundamentals </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="pf()">A+
+								<input type="radio" class="redio-btn" name="pf" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="pf()">A
+								<input type="radio" class="redio-btn" name="pf" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="pf()">A-
+								<input type="radio" class="redio-btn" name="pf" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="pf()">B+
+								<input type="radio" class="redio-btn" name="pf" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="pf()">B
+								<input type="radio" class="redio-btn" name="pf" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="pf()">B-
+								<input type="radio" class="redio-btn" name="pf" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="pf()">C+
+								<input type="radio" class="redio-btn" name="pf" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="pf()">C
+								<input type="radio" class="redio-btn" name="pf" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="pf()">C-
+								<input type="radio" class="redio-btn" name="pf" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="pf()">D+
+								<input type="radio" class="redio-btn" name="pf" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="pf()">D
+								<input type="radio" class="redio-btn" name="pf" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="pf()">E
+								<input type="radio" class="redio-btn" name="pf" value="0">
+							</label>
+						</td>
+					</tr>
+
+					<tr>
+						<td><h5>Mathematics for Computing </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="mathematics()">A+
+								<input type="radio" class="redio-btn" name="mathematics" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="mathematics()">A
+								<input type="radio" class="redio-btn" name="mathematics" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="mathematics()">A-
+								<input type="radio" class="redio-btn" name="mathematics" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="mathematics()">B+
+								<input type="radio" class="redio-btn" name="mathematics" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="mathematics()">B
+								<input type="radio" class="redio-btn" name="mathematics" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="mathematics()">B-
+								<input type="radio" class="redio-btn" name="mathematics" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="mathematics()">C+
+								<input type="radio" class="redio-btn" name="mathematics" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="mathematics()">C
+								<input type="radio" class="redio-btn" name="mathematics" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="mathematics()">C-
+								<input type="radio" class="redio-btn" name="mathematics" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="mathematics()">D+
+								<input type="radio" class="redio-btn" name="mathematics" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="mathematics()">D
+								<input type="radio" class="redio-btn" name="mathematics" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="mathematics()">E
+								<input type="radio" class="redio-btn" name="mathematics" value="0">
+							</label>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td><h5> Database Management Systems </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="database()">A+
+								<input type="radio" class="redio-btn" name="database" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="database()">A
+								<input type="radio" class="redio-btn" name="database" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="database()">A-
+								<input type="radio" class="redio-btn" name="database" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="database()">B+
+								<input type="radio" class="redio-btn" name="database" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="database()">B
+								<input type="radio" class="redio-btn" name="database" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="database()">B-
+								<input type="radio" class="redio-btn" name="database" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="database()">C+
+								<input type="radio" class="redio-btn" name="database" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="database()">C
+								<input type="radio" class="redio-btn" name="database" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="database()">C-
+								<input type="radio" class="redio-btn" name="database" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="database()">D+
+								<input type="radio" class="redio-btn" name="database" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="database()">D
+								<input type="radio" class="redio-btn" name="database" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="database()">E
+								<input type="radio" class="redio-btn" name="database" value="0">
+							</label>
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td><h5> Computer Technology </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="computerTech()">A+
+								<input type="radio" class="redio-btn" name="computerTech" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="computerTech()">A
+								<input type="radio" class="redio-btn" name="computerTech" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="computerTech()">A-
+								<input type="radio" class="redio-btn" name="computerTech" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="computerTech()">B+
+								<input type="radio" class="redio-btn" name="computerTech" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="computerTech()">B
+								<input type="radio" class="redio-btn" name="computerTech" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="computerTech()">B-
+								<input type="radio" class="redio-btn" name="computerTech" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="computerTech()">C+
+								<input type="radio" class="redio-btn" name="computerTech" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="computerTech()">C
+								<input type="radio" class="redio-btn" name="computerTech" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="computerTech()">C-
+								<input type="radio" class="redio-btn" name="computerTech" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="computerTech()">D+
+								<input type="radio" class="redio-btn" name="computerTech" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="computerTech()">D
+								<input type="radio" class="redio-btn" name="computerTech" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="computerTech()">E
+								<input type="radio" class="redio-btn" name="computerTech" value="0">
+							</label>
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td><h5> Object Oriented Programming </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="objectop()">A+
+								<input type="radio" class="redio-btn" name="objectop" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="objectop()">A
+								<input type="radio" class="redio-btn" name="objectop" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="objectop()">A-
+								<input type="radio" class="redio-btn" name="objectop" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="objectop()">B+
+								<input type="radio" class="redio-btn" name="objectop" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="objectop()">B
+								<input type="radio" class="redio-btn" name="objectop" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="objectop()">B-
+								<input type="radio" class="redio-btn" name="objectop" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="objectop()">C+
+								<input type="radio" class="redio-btn" name="objectop" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="objectop()">C
+								<input type="radio" class="redio-btn" name="objectop" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="objectop()">C-
+								<input type="radio" class="redio-btn" name="objectop" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="objectop()">D+
+								<input type="radio" class="redio-btn" name="objectop" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="objectop()">D
+								<input type="radio" class="redio-btn" name="objectop" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="objectop()">E
+								<input type="radio" class="redio-btn" name="objectop" value="0">
+							</label>
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td><h5> Computer Architecture and Networks </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="compterAN()">A+
+								<input type="radio" class="redio-btn" name="compterAN" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="compterAN()">A
+								<input type="radio" class="redio-btn" name="compterAN" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="compterAN()">A-
+								<input type="radio" class="redio-btn" name="compterAN" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="compterAN()">B+
+								<input type="radio" class="redio-btn" name="compterAN" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="compterAN()">B
+								<input type="radio" class="redio-btn" name="compterAN" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="compterAN()">B-
+								<input type="radio" class="redio-btn" name="compterAN" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="compterAN()">C+
+								<input type="radio" class="redio-btn" name="compterAN" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="compterAN()">C
+								<input type="radio" class="redio-btn" name="compterAN" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="compterAN()">C-
+								<input type="radio" class="redio-btn" name="compterAN" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="compterAN()">D+
+								<input type="radio" class="redio-btn" name="compterAN" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="compterAN()">D
+								<input type="radio" class="redio-btn" name="compterAN" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="compterAN()">E
+								<input type="radio" class="redio-btn" name="compterAN" value="0">
+							</label>
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td><h5> GUI Application Development </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="GUIapp()">A+
+								<input type="radio" class="redio-btn" name="GUIapp" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="GUIapp()">A
+								<input type="radio" class="redio-btn" name="GUIapp" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="GUIapp()">A-
+								<input type="radio" class="redio-btn" name="GUIapp" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="GUIapp()">B+
+								<input type="radio" class="redio-btn" name="GUIapp" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="GUIapp()">B
+								<input type="radio" class="redio-btn" name="GUIapp" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="GUIapp()">B-
+								<input type="radio" class="redio-btn" name="GUIapp" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="GUIapp()">C+
+								<input type="radio" class="redio-btn" name="GUIapp" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="GUIapp()">C
+								<input type="radio" class="redio-btn" name="GUIapp" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="GUIapp()">C-
+								<input type="radio" class="redio-btn" name="GUIapp" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="GUIapp()">D+
+								<input type="radio" class="redio-btn" name="GUIapp" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="GUIapp()">D
+								<input type="radio" class="redio-btn" name="GUIapp" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="GUIapp()">E
+								<input type="radio" class="redio-btn" name="GUIapp" value="0">
+							</label>
+						</td>
+					</tr>
+
+
+
+
+					<tr>
+						<td><h5> Operating Systems </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="operatingSystem()">A+
+								<input type="radio" class="redio-btn" name="operatingSystem" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="operatingSystem()">A
+								<input type="radio" class="redio-btn" name="operatingSystem" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="operatingSystem()">A-
+								<input type="radio" class="redio-btn" name="operatingSystem" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="operatingSystem()">B+
+								<input type="radio" class="redio-btn" name="operatingSystem" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="operatingSystem()">B
+								<input type="radio" class="redio-btn" name="operatingSystem" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="operatingSystem()">B-
+								<input type="radio" class="redio-btn" name="operatingSystem" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="operatingSystem()">C+
+								<input type="radio" class="redio-btn" name="operatingSystem" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="operatingSystem()">C
+								<input type="radio" class="redio-btn" name="operatingSystem" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="operatingSystem()">C-
+								<input type="radio" class="redio-btn" name="operatingSystem" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="operatingSystem()">D+
+								<input type="radio" class="redio-btn" name="operatingSystem" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="operatingSystem()">D
+								<input type="radio" class="redio-btn" name="operatingSystem" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="operatingSystem()">E
+								<input type="radio" class="redio-btn" name="operatingSystem" value="0">
+							</label>
+						</td>
+					</tr>
+
+
+
+
+
+					<tr>
+						<td><h5> Enterprise Application Development-1 (java) </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="EADev()">A+
+								<input type="radio" class="redio-btn" name="EADev" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="EADev()">A
+								<input type="radio" class="redio-btn" name="EADev" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="EADev()">A-
+								<input type="radio" class="redio-btn" name="EADev" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="EADev()">B+
+								<input type="radio" class="redio-btn" name="EADev" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="EADev()">B
+								<input type="radio" class="redio-btn" name="EADev" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="EADev()">B-
+								<input type="radio" class="redio-btn" name="EADev" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="EADev()">C+
+								<input type="radio" class="redio-btn" name="EADev" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="EADev()">C
+								<input type="radio" class="redio-btn" name="EADev" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="EADev()">C-
+								<input type="radio" class="redio-btn" name="EADev" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="EADev()">D+
+								<input type="radio" class="redio-btn" name="EADev" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="EADev()">D
+								<input type="radio" class="redio-btn" name="EADev" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="EADev()">E
+								<input type="radio" class="redio-btn" name="EADev" value="0">
+							</label>
+						</td>
+					</tr>
+
+					<tr>
+						<td><h5> Web Application Development </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="WebAppDev()">A+
+								<input type="radio" class="redio-btn" name="WebAppDev" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="WebAppDev()">A
+								<input type="radio" class="redio-btn" name="WebAppDev" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="WebAppDev()">A-
+								<input type="radio" class="redio-btn" name="WebAppDev" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="WebAppDev()">B+
+								<input type="radio" class="redio-btn" name="WebAppDev" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="WebAppDev()">B
+								<input type="radio" class="redio-btn" name="WebAppDev" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="WebAppDev()">B-
+								<input type="radio" class="redio-btn" name="WebAppDev" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="WebAppDev()">C+
+								<input type="radio" class="redio-btn" name="WebAppDev" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="WebAppDev()">C
+								<input type="radio" class="redio-btn" name="WebAppDev" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="WebAppDev()">C-
+								<input type="radio" class="redio-btn" name="WebAppDev" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="WebAppDev()">D+
+								<input type="radio" class="redio-btn" name="WebAppDev" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="WebAppDev()">D
+								<input type="radio" class="redio-btn" name="WebAppDev" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="WebAppDev()">E
+								<input type="radio" class="redio-btn" name="WebAppDev" value="0">
+							</label>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td><h5> Software Engineering </h5></td>
+						<td>:
+							<label class="label lab-1" onclick="softEng()">A+
+								<input type="radio" class="redio-btn" name="softEng" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="softEng()">A
+								<input type="radio" class="redio-btn" name="softEng" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="softEng()">A-
+								<input type="radio" class="redio-btn" name="softEng" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="softEng()">B+
+								<input type="radio" class="redio-btn" name="softEng" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="softEng()">B
+								<input type="radio" class="redio-btn" name="softEng" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="softEng()">B-
+								<input type="radio" class="redio-btn" name="softEng" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="softEng()">C+
+								<input type="radio" class="redio-btn" name="softEng" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="softEng()">C
+								<input type="radio" class="redio-btn" name="softEng" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="softEng()">C-
+								<input type="radio" class="redio-btn" name="softEng" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="softEng()">D+
+								<input type="radio" class="redio-btn" name="softEng" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="softEng()">D
+								<input type="radio" class="redio-btn" name="softEng" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="softEng()">E
+								<input type="radio" class="redio-btn" name="softEng" value="0">
+							</label>
+						</td>
+					</tr>
+
+					<tr>
+						<td><h5> Software Engineering Project</h5></td>
+						<td>:
+							<label class="label lab-1" onclick="softEngiProject()">A+
+								<input type="radio" class="redio-btn" name="softEngiProject" value="4">
+							</label>
+							&#160;
+							<label class="label lab-2" onclick="softEngiProject()">A
+								<input type="radio" class="redio-btn" name="softEngiProject" value="4">
+							</label>
+							&#160;
+							<label class="label lab-3" onclick="softEngiProject()">A-
+								<input type="radio" class="redio-btn" name="softEngiProject" value="3.7">
+							</label>
+							&#160;
+							<label class="label lab-4" onclick="softEngiProject()">B+
+								<input type="radio" class="redio-btn" name="softEngiProject" value="3.3">
+							</label>
+							&#160;
+							<label class="label lab-5" onclick="softEngiProject()">B
+								<input type="radio" class="redio-btn" name="softEngiProject" value="3">
+							</label>
+							&#160;
+							<label class="label lab-6" onclick="softEngiProject()">B-
+								<input type="radio" class="redio-btn" name="softEngiProject" value="2.7">
+							</label>
+							&#160;
+							<label class="label lab-7" onclick="softEngiProject()">C+
+								<input type="radio" class="redio-btn" name="softEngiProject" value="2.3">
+							</label>
+							&#160;
+							<label class="label lab-8" onclick="softEngiProject()">C
+								<input type="radio" class="redio-btn" name="softEngiProject" value="2.0">
+							</label>
+							&#160;
+							<label class="label lab-9" onclick="softEngiProject()">C-
+								<input type="radio" class="redio-btn" name="softEngiProject" value="1.7">
+							</label>
+							&#160;
+							<label class="label lab-10" onclick="softEngiProject()">D+
+								<input type="radio" class="redio-btn" name="softEngiProject" value="1.3">
+							</label>
+							&#160;
+							<label class="label lab-11" onclick="softEngiProject()">D
+								<input type="radio" class="redio-btn" name="softEngiProject" value="1">
+							</label>
+							&#160;
+							<label class="label lab-12" onclick="softEngiProject()">E
+								<input type="radio" class="redio-btn" name="softEngiProject" value="0">
+							</label>
+						</td>
+					</tr>
+
+				</table>
+
+			</div>		
+
+		</section>
+
+	</main>
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
